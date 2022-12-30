@@ -23,17 +23,22 @@ print('Задача 1. Урок информатики 2')
 # Введите число: 0.0012
 # Формат плавающей точки: x = 1.2 * 10 ** -3
 
-start_number = float(input("Введите число: "))
-count = 0
-zero_count = 0
-if int(start_number) <= 0:
-    while int(start_number) <= 0:
-        start_number *= 10
-        zero_count -= 1
-    print(f"Формат плавающей точки: x = {round(start_number, 1)} * 10 ** {zero_count}")
-else:
-    while start_number > 10:
-        count += 1
-        start_number /= 10
 
-    print(f"Формат плавающей точки: x = {start_number} * 10 ** {count}")
+start_number = float(input("Введите число: "))
+if start_number <= 0:
+    print("Введите число больше 0")
+else:
+
+    count = 0
+    zero_count = 0
+    if int(start_number) <= 0:
+        while int(start_number) <= 0:
+            start_number *= 10
+            zero_count -= 1
+        print(f"Формат плавающей точки: x = {round(start_number, 1)} * 10 ** {zero_count}")
+    else:
+        while start_number > 10:
+            count += 1
+            start_number /= 10
+
+        print(f"Формат плавающей точки: x = {start_number} * 10 ** {count}")
