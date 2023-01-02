@@ -12,10 +12,10 @@ count = 0
 for leg in leg_size:
     if leg in skates_size:
         number = leg
-        print(number)
         skates_size.remove(number)
         leg_size.remove(number)
         count += 1
+        leg_size.insert(0, "")
 print("Наибольшее кол-во людей, которые могут взять ролики:", count)
 
 
